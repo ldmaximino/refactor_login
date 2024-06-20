@@ -13,6 +13,7 @@ export const registerOrLogin = async (accessToken, refreshToken, profile, done) 
     try {
         let first_name = '';
         let last_name = '';
+        console.log(profile);
         const email = profile._json.email || '';
         const longiName = profile._json.name.split(' ').length;
         if(longiName >= 3) {
